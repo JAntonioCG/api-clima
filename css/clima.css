@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  background-image: url(../assets/images/Frame1.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 1674px;
+  height: 90%;
+  max-height: 1024px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/images/Frame.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.side-rectangle {
+  position: absolute;
+  width: 23%; /* Ancho reducido para evitar que se salga */
+  height: 85%; /* Altura ajustada */
+  top: 7%; /* Ajusta la posición superior */
+  left: 2%; /* Asegúrate de que se mantenga dentro del contenedor */
+  border-radius: 35px 0px 0px 0px;
+  background-image: url(../assets/images/Rectangle_1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box; /* Asegura que los márgenes y relleno no hagan que se salga */
+}
+
+
+.card {
+  width: 85%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/images/Rectangle_2.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100px;
+}
+
+.inputCity {
+  width: 60%; /* Ajusta el ancho de la barra de búsqueda */
+  padding: 8px; /* Reduce el relleno interno para que sea más compacto */
+  font-size: 0.9rem; /* Tamaño de texto más pequeño */
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+button {
+  padding: 8px 15px; /* Reduce el tamaño del botón */
+  margin-left: 10px;
+  font-size: 0.9rem; /* Tamaño de texto más pequeño en el botón */
+  border-radius: 10px;
+  border: none;
+  background-color: transparent; 
+  background-image: url(../assets/images/button_bg.png);
+  background-size: cover; /* Asegúrate de que el fondo se ajuste al tamaño del botón */
+  color: white; 
+  cursor: pointer;
+}
+
+.clima-info {
+  margin-top: 10px;
+  color: white; /* Color del texto */
+  text-align: center; /* Alinear el texto al centro */
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  .side-rectangle {
+    width: 30vw; /* Ajustar el ancho a 30% en pantallas medianas */
+    height: 75vh; /* Ajustar la altura a 75% */
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-rectangle {
+    width: 40vw; /* Ajustar el ancho a 40% en pantallas más pequeñas */
+    height: 70vh; /* Ajustar la altura a 70% */
+  }
+
+  .card {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-rectangle {
+    width: 90vw; /* Ajustar el ancho a 90% en pantallas muy pequeñas */
+    height: 60vh; /* Ajustar la altura a 60% */
+  }
+
+  .card {
+    width: 100%; /* La tarjeta ocupa todo el ancho */
+  }
+}
