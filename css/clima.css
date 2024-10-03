@@ -181,12 +181,6 @@ button {
   background-image: url(../assets/images/Rectangle_21.png);
 }
 
-.icon01 {
-  position: absolute;
-  top: 120px;
-  left: 300px;
-}
-
 .rectangle07, .rectangle08 {
   position: absolute;
   width: 280px; /* Ancho ajustado */
