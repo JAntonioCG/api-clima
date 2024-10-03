@@ -9,7 +9,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Alineación al principio de la página */
 }
 
 .container {
@@ -18,33 +18,59 @@ body {
   height: 90%;
   max-height: 1024px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Cambia a columna para apilar elementos */
+  align-items: center; /* Centra horizontalmente */
+  position: relative;
   background-image: url(../assets/images/Frame.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  position: relative;
   overflow: hidden;
+}
+
+.title01 {
+  color: white;
+  font-size: 48px; /* Tamaño más grande */
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0; /* Espacio entre el título y otros elementos */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Arial', sans-serif;
+  position: absolute; /* Cambia a posición absoluta */
+  top: 5px; /* Ajusta esta propiedad para posicionar el título */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra el título en su posición */
+}
+
+.title02 {
+  color: white;
+  font-size: 48px; /* Tamaño más grande */
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0; /* Espacio entre el título y otros elementos */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Arial', sans-serif;
+  position: absolute; /* Cambia a posición absoluta */
+  top: 220px; /* Ajusta esta propiedad para posicionar el título */
+  left: 50%; /* Centra horizontalmente */
+  transform: translateX(-50%); /* Centra el título en su posición */
 }
 
 .side-rectangle {
   position: absolute;
-  width: 23%; /* Ancho reducido para evitar que se salga */
-  height: 85%; /* Altura ajustada */
-  top: 7%; /* Ajusta la posición superior */
-  left: 2%; /* Asegúrate de que se mantenga dentro del contenedor */
+  width: 23%;
+  height: 85%;
+  top: 7%;
+  left: 2%;
   border-radius: 35px 0px 0px 0px;
   background-image: url(../assets/images/Rectangle_1.png);
   background-size: cover;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  box-sizing: border-box; /* Asegura que los márgenes y relleno no hagan que se salga */
+  box-sizing: border-box;
 }
-
 
 .card {
   width: 85%;
@@ -55,14 +81,13 @@ body {
   align-items: center;
   background-image: url(../assets/images/Rectangle_2.png);
   background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 100px;
 }
 
 .inputCity {
-  width: 60%; /* Ajusta el ancho de la barra de búsqueda */
-  padding: 8px; /* Reduce el relleno interno para que sea más compacto */
-  font-size: 0.9rem; /* Tamaño de texto más pequeño */
+  width: 60%;
+  padding: 8px;
+  font-size: 0.9rem;
   border-radius: 10px;
   border: none;
   background-color: transparent;
@@ -70,31 +95,140 @@ body {
 }
 
 button {
-  padding: 8px 15px; /* Reduce el tamaño del botón */
+  padding: 8px 15px;
   margin-left: 10px;
-  font-size: 0.9rem; /* Tamaño de texto más pequeño en el botón */
+  font-size: 0.9rem;
   border-radius: 10px;
   border: none;
-  background-color: transparent; 
+  background-color: transparent;
   background-image: url(../assets/images/button_bg.png);
-  background-size: cover; /* Asegúrate de que el fondo se ajuste al tamaño del botón */
-  color: white; 
+  background-size: cover;
+  color: white;
   cursor: pointer;
 }
 
 .clima-info {
-  margin-top: 10px;
-  color: white; /* Color del texto */
-  text-align: center; /* Alinear el texto al centro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
 }
 
-/* Media Queries para diferentes tamaños de pantalla */
+.clima-info img {
+  width: 150px;
+  height: auto;
+  margin: 5px;
+}
+
+.rectangle01, .rectangle02, .rectangle03, .rectangle04, .rectangle05, .rectangle06 {
+  position: absolute;
+  width: 80px; /* Ancho ajustado */
+  height: 120px; /* Altura ajustada */
+  top: 120px;
+  gap: 0px;
+  border-radius: 20px 0px 0px 0px;
+  border: 1px solid transparent;
+  opacity: 1;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; /* Espacio entre elementos */
+  font-size: 12px; /* Tamaño de fuente ajustado */
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Evita que el contenido se salga */
+}
+
+.rectangle01 p, .rectangle02 p, .rectangle03 p, .rectangle04 p, .rectangle05 p, .rectangle06 p {
+  margin: 5px 0; /* Añade margen interno */
+}
+
+.rectangle01 img, .rectangle02 img, .rectangle03 img, .rectangle04 img, .rectangle05 img, .rectangle06 img {
+  width: 40px; /* Tamaño de la imagen ajustado */
+  height: 40px;
+  object-fit: contain; /* Ajusta la imagen dentro del contenedor */
+}
+
+.rectangle01 {
+  left: 250px;
+  background-image: url(../assets/images/Rectangle_6.png);
+}
+
+.rectangle02 {
+  left: 350px;
+  background-image: url(../assets/images/Rectangle_13.png);
+}
+
+.rectangle03 {
+  left: 450px;
+  background-image: url(../assets/images/Rectangle_15.png);
+}
+
+.rectangle04 {
+  left: 550px;
+  background-image: url(../assets/images/Rectangle_17.png);
+}
+
+.rectangle05 {
+  left: 650px;
+  background-image: url(../assets/images/Rectangle_19.png);
+}
+
+.rectangle06 {
+  left: 750px;
+  background-image: url(../assets/images/Rectangle_21.png);
+}
+
+.icon01 {
+  position: absolute;
+  top: 120px;
+  left: 300px;
+}
+
+.rectangle07, .rectangle08 {
+  position: absolute;
+  width: 280px; /* Ancho ajustado */
+  height: 250px; /* Altura ajustada */
+  top: 290px;
+  gap: 0px;
+  border-radius: 20px 0px 0px 0px;
+  border: 1px solid transparent;
+  opacity: 1;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; /* Espacio entre elementos */
+  font-size: 12px; /* Tamaño de fuente ajustado */
+  color: white;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-size: 14px; /* Tamaño más grande */
+  font-weight: bold;
+  text-align: center;
+  margin: 50px 0; /* Espacio entre el título y otros elementos */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* Evita que el contenido se salga */
+}
+
+.rectangle07 {
+  left: 290px;
+  background-image: url(../assets/images/Rectangle_26.png);
+}
+
+.rectangle08 {
+  left: 580px;
+  background-image: url(../assets/images/Rectangle_25.png);
+}
+
+/* Media Queries */
 @media (max-width: 1024px) {
   .side-rectangle {
-    width: 30vw; /* Ajustar el ancho a 30% en pantallas medianas */
-    height: 75vh; /* Ajustar la altura a 75% */
+    width: 30vw;
+    height: 75vh;
   }
-
   .card {
     width: 90%;
   }
@@ -102,10 +236,9 @@ button {
 
 @media (max-width: 768px) {
   .side-rectangle {
-    width: 40vw; /* Ajustar el ancho a 40% en pantallas más pequeñas */
-    height: 70vh; /* Ajustar la altura a 70% */
+    width: 40vw;
+    height: 70vh;
   }
-
   .card {
     width: 95%;
   }
@@ -113,11 +246,10 @@ button {
 
 @media (max-width: 480px) {
   .side-rectangle {
-    width: 90vw; /* Ajustar el ancho a 90% en pantallas muy pequeñas */
-    height: 60vh; /* Ajustar la altura a 60% */
+    width: 90vw;
+    height: 60vh;
   }
-
   .card {
-    width: 100%; /* La tarjeta ocupa todo el ancho */
+    width: 100%;
   }
 }
